@@ -1,0 +1,48 @@
+1. Find the canvas element by using 
+-Document.getElementById
+2. We need a Drawing object for the canvas 
+Var ctx=canvas.getContext("2d");
+-getContext is a build-in html object, with properties and method
+
+3. Draw on canvas
+-ctx.fillStyle="#FF0000";
+4. The fillRect(x,y,width,height) method draws a rectangle, filled with the fill style, on the canvas
+-ctx.fillRect(0,0,150,75);
+
+
+***********************************************************************
+
+
+Canvas Coordinates
+The HTML canvas is a two-dimensional grid.
+
+The upper-left corner of the canvas has the coordinates (0,0)
+
+In the previous chapter, you saw this method used: fillRect(0,0,150,75).
+
+This means: Start at the upper-left corner (0,0) and draw a 150x75 pixels rectangle.
+**********************************************************************
+Canvas Gradients:
+1. Linear gradiant.
+2. Create Radial Gradiant.
+
+***********************************************************************
+High Level Summary of Canvas vs. SVG
+
+Canvas
+
+Pixel based (Dynamic .png)
+Single HTML element.(Inspect element in Developer tool. You can see only canvas tag)
+Modified through script only
+Event model/user interaction is granular (x,y)
+Performance is better with smaller surface, a larger number of objects (>10k), or both
+
+
+SVG
+
+Shape based
+Multiple graphical elements, which become part of the DOM
+Modified through script and CSS
+Event model/user interaction is abstracted (rect, path)
+Performance is better with smaller number of objects (<10k), a larger surface, or both
+
